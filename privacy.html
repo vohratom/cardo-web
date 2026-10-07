@@ -4,7 +4,7 @@
 <body><main>
 <header><img src="icon.png" alt=""><a href="./">Cardo</a></header>
 <h1>Ochrana soukromí</h1>
-<p class="muted">Platné od 7. 10. 2026 · <a class="lang" href="#en">English version below</a></p>
+<p class="muted">Platné od 7. 10. 2026 (aktualizováno o uživatelské účty) · <a class="lang" href="#en">English version below</a></p>
 
 <section class="card">
 <h2>Kdo za aplikací stojí</h2>
@@ -12,17 +12,31 @@
 Kontakt: <a href="mailto:vohradnik.tomas@seznam.cz">vohradnik.tomas@seznam.cz</a>.</p>
 
 <h2>Stručně</h2>
-<p>Cardo nemá uživatelské účty, žádný server ani reklamy a nesbírá žádnou analytiku. Tvoje karty jsou uložené
-pouze v tvém telefonu. Provozovatel k nim nemá přístup.</p>
+<p>Pro používání Carda si založíš účet (e-mail a heslo). Karty se ukládají v telefonu a zálohují se do tvého účtu na
+serveru provozovatele v České republice, aby se přenesly na další telefon. Aplikace nemá reklamy, nesbírá analytiku
+a data nikomu neprodává ani nepředává.</p>
+
+<h2>Účet a server</h2>
+<ul>
+<li><strong>E-mail</strong> — k přihlášení a k odeslání odkazu na nové heslo. Jiné e-maily neposíláme.</li>
+<li><strong>Heslo</strong> — ukládá se jen jako jednosměrný otisk (bcrypt), ne v čitelné podobě.</li>
+<li><strong>Karty</strong> (název, číslo, barva, údaje o používání a místa, kde jsi kartu použil) — kvůli záloze a synchronizaci.</li>
+<li>Server běží na VPS společnosti WEDOS Internet, a.s. v České republice (zpracovatel). Spojení je šifrované (HTTPS).
+Server si vede běžné technické záznamy (IP adresa, čas požadavku) kvůli provozu a ochraně proti zneužití.</li>
+<li>Právní základ: plnění smlouvy (poskytnutí služby, o kterou žádáš). Data uchováváme, dokud účet nesmažeš;
+zálohy databáze se mažou po 60 dnech.</li>
+<li>Máš právo na přístup k údajům, jejich opravu, výmaz, přenositelnost (export karet v aplikaci) a právo podat stížnost
+u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</li>
+</ul>
 
 <h2>Jaká data aplikace zpracovává</h2>
 <ul>
-<li><strong>Věrnostní karty</strong> (název, číslo karty, barva, kdy a kolikrát byla použita) — uložené jen v zařízení.</li>
+<li><strong>Věrnostní karty</strong> — v zařízení a v tvém účtu (viz výše).</li>
 <li><strong>Fotoaparát</strong> — slouží jen ke čtení čárového/QR kódu v reálném čase. Snímky se neukládají ani neodesílají.</li>
 <li><strong>Fotky</strong> — jen pokud sám vybereš fotku karty, aby z ní aplikace přečetla kód. Fotka se neukládá ani neodesílá.</li>
 <li><strong>Poloha</strong> (jen při používání aplikace, nikdy na pozadí) — aby aplikace poznala, ve kterém obchodě jsi, a otevřela
 jeho kartu. Porovnání probíhá v telefonu se seznamem prodejen, který je součástí aplikace, a s místy, kde jsi kartu dříve použil
-(tato místa se ukládají jen v zařízení). Jen když aplikace v telefonu nic nenajde, odešle přibližné souřadnice
+(tato místa se ukládají v zařízení a s kartou i v účtu). Jen když aplikace v telefonu nic nenajde, odešle přibližné souřadnice
 anonymně (bez jakéhokoli identifikátoru) do veřejné služby OpenStreetMap Overpass API, aby zjistila okolní obchody.
 Používání polohy můžeš kdykoli vypnout v Nastavení aplikace nebo telefonu.</li>
 </ul>
@@ -33,12 +47,12 @@ Používání polohy můžeš kdykoli vypnout v Nastavení aplikace nebo telefon
 souboru je jen na tobě a soubor zůstává tam, kam ho uložíš nebo pošleš.</p>
 
 <h2>Sdílení s třetími stranami</h2>
-<p>Data neprodáváme ani nesdílíme. Jedinou výjimkou je anonymní dotaz na okolní obchody do OpenStreetMap popsaný výše
-(<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">zásady OSMF</a>).</p>
+<p>Data neprodáváme ani nesdílíme. Výjimkou je poskytovatel serveru (WEDOS) jako zpracovatel a anonymní dotaz na okolní
+obchody do OpenStreetMap popsaný výše (<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">zásady OSMF</a>).</p>
 
 <h2>Smazání dat</h2>
-<p>Kartu smažeš přímo v aplikaci (detail karty → ⋯ → Smazat). Odinstalováním aplikace se smažou všechna její data v telefonu.
-Účty neexistují, takže není co mazat jinde.</p>
+<p>Kartu smažeš přímo v aplikaci (detail karty → ⋯ → Smazat). Celý účet včetně všech karet smažeš v aplikaci:
+Nastavení → Smazat účet. Bez aplikace můžeš o smazání požádat e-mailem — viz <a href="delete-account.html">Smazání účtu</a>.</p>
 
 <h2>Děti</h2>
 <p>Aplikace není určena dětem do 13 let a vědomě od nich nesbírá žádné údaje.</p>
@@ -54,30 +68,41 @@ souboru je jen na tobě a soubor zůstává tam, kam ho uložíš nebo pošleš.
 <p>Cardo is developed and operated by <strong>Tomáš Vohradník</strong>, an individual based in the Czech Republic.
 Contact: <a href="mailto:vohradnik.tomas@seznam.cz">vohradnik.tomas@seznam.cz</a>.</p>
 <h2>In short</h2>
-<p>Cardo has no user accounts, no servers, no ads and no analytics. Your cards are stored only on your device; the developer
-has no access to them.</p>
+<p>Cardo uses an account (e-mail and password). Your cards are stored on your device and backed up to your account on the
+developer's server in the Czech Republic, so they move to your next phone. No ads, no analytics, no selling or sharing of data.</p>
+<h2>Account and server</h2>
+<ul>
+<li><strong>E-mail</strong> — to sign in and to send a password-reset link. No other e-mails.</li>
+<li><strong>Password</strong> — stored only as a one-way hash (bcrypt).</li>
+<li><strong>Cards</strong> (name, number, colour, usage and places where you used them) — for backup and sync.</li>
+<li>The server runs on a VPS by WEDOS Internet, a.s. in the Czech Republic (processor), over HTTPS, with ordinary technical logs
+(IP address, request time) for operation and abuse protection.</li>
+<li>Legal basis: performance of a contract. Data is kept until you delete the account; database backups are removed after 60 days.</li>
+<li>You have the right to access, rectify, erase and port your data and to complain to the Czech data protection authority (uoou.gov.cz).</li>
+</ul>
 <h2>Data the app processes</h2>
 <ul>
-<li><strong>Loyalty cards</strong> (name, card number, colour, when and how often used) — stored on your device only.</li>
+<li><strong>Loyalty cards</strong> — on your device and in your account (see above).</li>
 <li><strong>Camera</strong> — used only to read a barcode/QR code in real time. No images are stored or transmitted.</li>
 <li><strong>Photos</strong> — only when you pick a photo of a card so the app can read its code. The photo is not stored or transmitted.</li>
 <li><strong>Location</strong> (while using the app only, never in the background) — to recognise the shop you are in and open its card.
 Matching happens on the device against a list of store locations bundled with the app and places where you used a card before
-(stored on the device only). Only if nothing matches on the device, approximate coordinates are sent anonymously (without any
+(stored on the device and, with the card, in your account). Only if nothing matches on the device, approximate coordinates are sent anonymously (without any
 identifier) to the public OpenStreetMap Overpass API to look up nearby shops. You can turn this off in the app or system settings.</li>
 </ul>
 <h2>Backups</h2>
 <p>The app keeps a daily backup of your cards in its own storage on the device, which is included in your regular device backup
 (iCloud / Google) if enabled — managed by Apple or Google under your settings. Manual exports are files you control.</p>
 <h2>Third parties</h2>
-<p>We do not sell or share data. The only exception is the anonymous nearby-shop query to OpenStreetMap described above.</p>
+<p>We do not sell or share data, except with the hosting provider (WEDOS) as a processor and the anonymous nearby-shop query
+to OpenStreetMap described above.</p>
 <h2>Deleting data</h2>
-<p>Delete a card in the app (card detail → ⋯ → Delete). Uninstalling the app removes all of its data from the device.
-There are no accounts, so there is nothing to delete elsewhere.</p>
+<p>Delete a card in the app (card detail → ⋯ → Delete). Delete the whole account with all cards in the app: Settings →
+Delete account, or by e-mail — see <a href="delete-account.html">Account deletion</a>.</p>
 <h2>Children</h2>
 <p>The app is not directed to children under 13 and does not knowingly collect their data.</p>
 <h2>Changes</h2>
 <p>Any changes will be published on this page with a new effective date.</p>
 </section>
-<nav><a href="./">Cardo</a><a href="support.html">Podpora / Support</a></nav>
+<nav><a href="./">Cardo</a><a href="support.html">Podpora / Support</a><a href="delete-account.html">Smazání účtu</a></nav>
 </main></body></html>
