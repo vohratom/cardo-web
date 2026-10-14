@@ -30,3 +30,9 @@ a.store::after { content: ""; position: absolute; top: 0; left: -60%; width: 45%
   pointer-events: none; animation: store-sheen 3.5s ease-in-out infinite; }
 @keyframes store-sheen { 0% { left: -60%; } 40%, 100% { left: 130%; } }
 @media (prefers-reduced-motion: reduce) { a.store::after { display: none; } }
+/* The logo floats and tilts gently, with a soft glow — alive without being busy. */
+header img.logo { animation: logo-float 4s ease-in-out infinite; box-shadow: 0 8px 22px rgba(225,29,72,.35); }
+@keyframes logo-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-4px) rotate(-6deg); } }
+@media (prefers-reduced-motion: reduce) { header img.logo { animation: none; } }
+/* Footer links stay quiet. */
+nav a { color: var(--muted); font-weight: 500; }
