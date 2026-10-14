@@ -23,3 +23,10 @@ nav a:hover, nav a:focus-visible { text-decoration: underline; }
 a.store { display:inline-block; margin-top: 14px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(135deg,#FF4D6D,#D61F45); color:#fff; font-weight: 800; text-decoration:none; box-shadow: 0 12px 28px rgba(225,29,72,.35); }
 @media (max-width: 600px) { .hero { flex-direction: column; text-align: center; } .hero .shot { width: 70%; } }
 .hero > * { min-width: 0; } .hero h1 { overflow-wrap: anywhere; }
+/* A light sweep across the App Store button every few seconds, to catch the eye. */
+a.store { position: relative; overflow: hidden; }
+a.store::after { content: ""; position: absolute; top: 0; left: -60%; width: 45%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent); transform: skewX(-18deg);
+  pointer-events: none; animation: store-sheen 3.5s ease-in-out infinite; }
+@keyframes store-sheen { 0% { left: -60%; } 40%, 100% { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { a.store::after { display: none; } }
