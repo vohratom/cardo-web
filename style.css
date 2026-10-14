@@ -36,4 +36,4 @@ header img.logo { animation: logo-float 4s ease-in-out infinite; box-shadow: 0 8
 @media (prefers-reduced-motion: reduce) { header img.logo { animation: none; } }
 /* Footer links stay quiet. */
 nav a { color: var(--muted); font-weight: 500; }
-nav a, nav a:visited { color: #8E8A8C; }
+nav a, nav a:visited { color: color-mix(in srgb, var(--muted) 55%, transparent); }
